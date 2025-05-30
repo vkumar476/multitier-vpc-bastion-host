@@ -72,13 +72,14 @@ variable "backend_cidr" {
 # VSI profile
 variable "profile" {
   description = "Profile for VSIs deployed in frontend and backend"
-  default     = "cx2-2x4"
+#  default     = "cx2-2x4"
+  default      = "bx2-2x8"
 }
 
 # image names can be determined with the cli command `ibmcloud is images`
 variable "image_name" {
   description = "OS image for VSI deployments. Only tested with Centos"
-  default     = "ibm-centos-7-9-minimal-amd64-10"
+  default     = "ibm-redhat-8-10-minimal-amd64-5"
 }
 
 data "ibm_is_image" "os" {
